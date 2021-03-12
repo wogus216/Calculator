@@ -4,18 +4,26 @@ public class Calculator {
 
 	public static void main(String[] args) {
 	Scanner sc= new Scanner(System.in);
-	System.out.println(" ÀÔ·Â°ª");
-	String input=sc.nextLine();
-	String[] splitValue=input.split(",");
-	int num1= Integer.parseInt(splitValue[0]);
-	System.out.println("µÎ¹øÂ° ÀÔ·Â°ª");
-	int num2= Integer.parseInt(splitValue[1]);
+	System.out.println("¼ıÀÚ µÎ°³¿Í »çÄ¢¿¬»ê±âÈ£ ÀÔ·ÂºÎÅ¹µå¸³´Ï´Ù.");
 	
-	System.out.println("µ¡¼À :"+(num1+num2));
-	System.out.println("»¬¼À :"+(num1-num2));
-	System.out.println("°ö¼À :"+(num1*num2));
-	System.out.println("³ª´°¼À :"+(num1/num2));
-	sc.close();
+	int num1=sc.nextInt();
+	int num2=sc.nextInt();
+	String symbol=sc.next();
+	
+	switch(symbol) {
+	case "+":
+		System.out.println(num1+num2);
+		break;
+	case "-":
+		System.out.println(num1-num2);
+		break;
+	case "*":
+		System.out.println(num1*num2);
+		break;
+	case "/":
+		System.out.println(num1/num2);
+		break;
 	}
-	
+		sc.close();
+	}
 }
