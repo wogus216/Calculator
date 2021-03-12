@@ -13,8 +13,9 @@ public class Calculator {
 	
 	System.out.println("µ¡¼À :"+(num1+num2));
 	System.out.println("»¬¼À :"+(num1-num2));
-	System.out.println("°ö¼À :"+num1*num2);
-	System.out.println("³ª´°¼À :"+num1/num2);
+	System.out.println("°ö¼À :"+(num1*num2));
+	System.out.println("³ª´°¼À :"+(num1/num2));
+	sc.close();
 	}
-
+	
 }
