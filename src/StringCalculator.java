@@ -1,31 +1,28 @@
 import java.util.Scanner;
 
 public class StringCalculator {
-
+	
 	public static void main(String[] args) {
-	System.out.println("계산을 입력해주세요");
 	Scanner sc= new Scanner(System.in);
-	String inputValue=sc.nextLine();
-	String[] inputValues=inputValue.split(" ");
-	System.out.println(inputValue);
+	System.out.println("계산할 값을 입력해주세요");
+	String InputValue=sc.nextLine();
+	String[] InputValues=InputValue.split(" ");
+	System.out.println("총 입력한 숫자 : "+InputValue);
 	
-	int first=Integer.parseInt(inputValues[0]);
-	System.out.println(first);
-
+	int first=Integer.parseInt(InputValues[0]);
+	System.out.println("첫째 값 : "+first);
+	
 	int result=first;
-	int i=1;
-	while(i<inputValues.length) {
-	String symbol=inputValues[i];
-	System.out.println(symbol);
+	for(int i=1; i<InputValues.length; i+=2) {
+		String symbol=InputValues[i];
+		System.out.println("사칙연산 기호 : "+symbol);
+		
+		int second=Integer.parseInt(InputValues[i+1]);
+				System.out.println("두번째 값 : "+second);
 	
-
-	int second=Integer.parseInt(inputValues[i+1]);
-	System.out.println(second);
-
-	i += 2;
-	result=Calculator2.calculate(result, symbol, second);
-		}
-	Output.print(result);
+		result=Calculator.calculate(result, symbol, second);
+	}
+	 	Output.print(result);
 	}	
 }
 
